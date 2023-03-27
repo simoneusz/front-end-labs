@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: "development",
@@ -26,6 +27,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
                 test: /\.html$/,
                 use: [
                     {
@@ -44,11 +49,23 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    "style-loader",
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
+                ],
+            },
         ],
     },
 
 
     plugins: [
+        new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             title: 'Index',
             template: path.resolve(__dirname, './src/pages/index.html'),

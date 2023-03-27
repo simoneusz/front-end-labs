@@ -2,11 +2,16 @@
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "node-sass": "^8.0.0",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.1",
+    "style-loader": "^3.3.2",
     "url-loader": "^4.1.1",
-    "webpack": "^5.75.0",
+    "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
   },

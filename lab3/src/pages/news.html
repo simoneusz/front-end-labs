@@ -1,171 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>news</title>
-        <style>
-            body {
-                font-family: "Helvetica Neue", sans-serif serif;
-            }
-            nav {
-                display: flex;
-                justify-content: center;
-            }
-            ul {
-                display: flex;
-                gap: 30px;
-            }
-            li {
-                list-style-type: none;
-                font-size: 14px;
-            }
-            .nav__item a {
-                font-size: 20px;
-                color: black;
-                text-decoration: none;
-            }
-        </style>
     </head>
-    <body>
-        <nav>
-            <ul>
-                <li class="nav__item"><a href="index.html">index</a></li>
-                <li class="nav__item"><a href="news.html">news</a></li>
-                <li class="nav__item"><a href="photo.html">photo</a></li>
-                <li class="nav__item"><a href="rozklad.html">rozklad</a></li>
-            </ul>
-        </nav>
-        <main>
-            <section>
-                <article>
-                    <h2>
-                        <a href="https://acode.com.ua/apt-and-apt-get-in-linux/"
-                            >Різниця між apt та apt-get в Linux</a
-                        >
-                    </h2>
-                    <p>
-                        Багато користувачів Linux часто не розуміють різниці між
-                        apt та apt-get, що не дивно: обидві утиліти
-                        використовуються для встановлення, оновлення, видалення
-                        пакетів і багато в чому схожі між собою. В цій статті ми
-                        обговоримо різницю між apt та apt-get.
-                    </p>
-                    <p>12 Бер 2023</p>
-                </article>
+    <body class="page__body">
+        <div class="wrapper">
+            <nav class="navigation">
+                <div class="navigation__container">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="index.html"
+                                >index</a
+                            >
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="news.html"
+                                >news</a
+                            >
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="photo.html"
+                                >photo</a
+                            >
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="rozklad.html"
+                                >rozklad</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content">
+                <div class="content__container">
+                    <section class="content__section">
+                        <article class="article">
+                            <h2 class="article__title">
+                                <a
+                                    href="https://acode.com.ua/apt-and-apt-get-in-linux/"
+                                    class="article__link"
+                                    >Різниця між apt та apt-get в Linux</a
+                                >
+                            </h2>
+                            <p class="article__description">
+                                Багато користувачів Linux часто не розуміють
+                                різниці між apt та apt-get, що не дивно: обидві
+                                утиліти використовуються для встановлення,
+                                оновлення, видалення пакетів і багато в чому
+                                схожі між собою. В цій статті ми обговоримо
+                                різницю між apt та apt-get.
+                            </p>
+                            <p class="article__date">12 Бер 2023</p>
+                        </article>
 
-                <article>
-                    <h2>
-                        <a href="https://acode.com.ua/constraints-sql/"
-                            >Обмеження в SQL</a
-                        >
-                    </h2>
-                    <p>
-                        У SQL ми можемо застосувати правила до стовпця, відомі
-                        як обмеження. Ці правила стосуються даних, які можуть
-                        зберігатися в стовпці. Наприклад, якщо стовпець має
-                        обмеження NOT NULL, то він не зможе зберігати значення
-                        NULL.
-                    </p>
-                    <p>11 Бер 2023</p>
-                </article>
-                <article>
-                    <h2>
-                        <a
-                            href="https://acode.com.ua/delete-from-truncate-table-sql/"
-                            >DELETE FROM та TRUNCATE TABLE в SQL</a
-                        >
-                    </h2>
-                    <p>
-                        Оператор DELETE FROM використовується для видалення
-                        рядків у таблиці. Наприклад: DELETE FROM Customers WHERE
-                        customer_id = 5; Тут ми видаляємо рядок з таблиці
-                        Customers, де customer_id дорівнює 5.
-                    </p>
-                    <p>11 Бер 2023</p>
-                </article>
-                <article>
-                    <h2>
-                        <a href="https://acode.com.ua/apt-and-apt-get-in-linux/"
-                            >Різниця між apt та apt-get в Linux</a
-                        >
-                    </h2>
-                    <p>
-                        Багато користувачів Linux часто не розуміють різниці між
-                        apt та apt-get, що не дивно: обидві утиліти
-                        використовуються для встановлення, оновлення, видалення
-                        пакетів і багато в чому схожі між собою. В цій статті ми
-                        обговоримо різницю між apt та apt-get.
-                    </p>
-                    <p>12 Бер 2023</p>
-                </article>
+                        <article class="article">
+                            <h2 class="article__title">
+                                <a
+                                    href="https://acode.com.ua/constraints-sql/"
+                                    class="article__link"
+                                >
+                                    Обмеження в SQL
+                                </a>
+                            </h2>
+                            <p class="article__description">
+                                У SQL ми можемо застосувати правила до стовпця,
+                                відомі як обмеження. Ці правила стосуються
+                                даних, які можуть зберігатися в стовпці.
+                                Наприклад, якщо стовпець має обмеження NOT NULL,
+                                то він не зможе зберігати значення NULL.
+                            </p>
+                            <p class="article__date">11 Бер 2023</p>
+                        </article>
+                        <article class="article">
+                            <h2 class="article__title">
+                                <a
+                                    href="https://acode.com.ua/apt-and-apt-get-in-linux/"
+                                    class="article__link"
+                                    >Різниця між apt та apt-get в Linux</a
+                                >
+                            </h2>
+                            <p class="article__description">
+                                Багато користувачів Linux часто не розуміють
+                                різниці між apt та apt-get, що не дивно: обидві
+                                утиліти використовуються для встановлення,
+                                оновлення, видалення пакетів і багато в чому
+                                схожі між собою. В цій статті ми обговоримо
+                                різницю між apt та apt-get.
+                            </p>
+                            <p class="article__date">12 Бер 2023</p>
+                        </article>
 
-                <article>
-                    <h2>
-                        <a href="https://acode.com.ua/constraints-sql/"
-                            >Обмеження в SQL</a
-                        >
-                    </h2>
-                    <p>
-                        У SQL ми можемо застосувати правила до стовпця, відомі
-                        як обмеження. Ці правила стосуються даних, які можуть
-                        зберігатися в стовпці. Наприклад, якщо стовпець має
-                        обмеження NOT NULL, то він не зможе зберігати значення
-                        NULL.
-                    </p>
-                    <p>11 Бер 2023</p>
-                </article>
-                <article>
-                    <h2>
-                        <a
-                            href="https://acode.com.ua/delete-from-truncate-table-sql/"
-                            >DELETE FROM та TRUNCATE TABLE в SQL</a
-                        >
-                    </h2>
-                    <p>
-                        Оператор DELETE FROM використовується для видалення
-                        рядків у таблиці. Наприклад: DELETE FROM Customers WHERE
-                        customer_id = 5; Тут ми видаляємо рядок з таблиці
-                        Customers, де customer_id дорівнює 5.
-                    </p>
-                    <p>11 Бер 2023</p>
-                </article>
-                <article>
-                    <h2>
-                        <a href="https://acode.com.ua/apt-and-apt-get-in-linux/"
-                            >Різниця між apt та apt-get в Linux</a
-                        >
-                    </h2>
-                    <p>
-                        Багато користувачів Linux часто не розуміють різниці між
-                        apt та apt-get, що не дивно: обидві утиліти
-                        використовуються для встановлення, оновлення, видалення
-                        пакетів і багато в чому схожі між собою. В цій статті ми
-                        обговоримо різницю між apt та apt-get.
-                    </p>
-                    <p>12 Бер 2023</p>
-                </article>
+                        <article class="article">
+                            <h2 class="article__title">
+                                <a
+                                    href="https://acode.com.ua/constraints-sql/"
+                                    class="article__link"
+                                >
+                                    Обмеження в SQL
+                                </a>
+                            </h2>
+                            <p class="article__description">
+                                У SQL ми можемо застосувати правила до стовпця,
+                                відомі як обмеження. Ці правила стосуються
+                                даних, які можуть зберігатися в стовпці.
+                                Наприклад, якщо стовпець має обмеження NOT NULL,
+                                то він не зможе зберігати значення NULL.
+                            </p>
+                            <p class="article__date">11 Бер 2023</p>
+                        </article>
+                        <article class="article">
+                            <h2 class="article__title">
+                                <a
+                                    href="https://acode.com.ua/apt-and-apt-get-in-linux/"
+                                    class="article__link"
+                                    >Різниця між apt та apt-get в Linux</a
+                                >
+                            </h2>
+                            <p class="article__description">
+                                Багато користувачів Linux часто не розуміють
+                                різниці між apt та apt-get, що не дивно: обидві
+                                утиліти використовуються для встановлення,
+                                оновлення, видалення пакетів і багато в чому
+                                схожі між собою. В цій статті ми обговоримо
+                                різницю між apt та apt-get.
+                            </p>
+                            <p class="article__date">12 Бер 2023</p>
+                        </article>
 
-                <article>
-                    <h2>
-                        <a href="https://acode.com.ua/constraints-sql/"
-                            >Обмеження в SQL</a
-                        >
-                    </h2>
-                    <p>
-                        У SQL ми можемо застосувати правила до стовпця, відомі
-                        як обмеження. Ці правила стосуються даних, які можуть
-                        зберігатися в стовпці. Наприклад, якщо стовпець має
-                        обмеження NOT NULL, то він не зможе зберігати значення
-                        NULL.
-                    </p>
-                    <p>11 Бер 2023</p>
-                </article>
-            </section>
-        </main>
-        <footer>
-            <p>Copyright 2014 Ваш сайт</p>
-        </footer>
+                        <article class="article">
+                            <h2 class="article__title">
+                                <a
+                                    href="https://acode.com.ua/constraints-sql/"
+                                    class="article__link"
+                                >
+                                    Обмеження в SQL
+                                </a>
+                            </h2>
+                            <p class="article__description">
+                                У SQL ми можемо застосувати правила до стовпця,
+                                відомі як обмеження. Ці правила стосуються
+                                даних, які можуть зберігатися в стовпці.
+                                Наприклад, якщо стовпець має обмеження NOT NULL,
+                                то він не зможе зберігати значення NULL.
+                            </p>
+                            <p class="article__date">11 Бер 2023</p>
+                        </article>
+                        <article class="article">
+                            <h2 class="article__title">
+                                <a
+                                    href="https://acode.com.ua/apt-and-apt-get-in-linux/"
+                                    class="article__link"
+                                    >Різниця між apt та apt-get в Linux</a
+                                >
+                            </h2>
+                            <p class="article__description">
+                                Багато користувачів Linux часто не розуміють
+                                різниці між apt та apt-get, що не дивно: обидві
+                                утиліти використовуються для встановлення,
+                                оновлення, видалення пакетів і багато в чому
+                                схожі між собою. В цій статті ми обговоримо
+                                різницю між apt та apt-get.
+                            </p>
+                            <p class="article__date">12 Бер 2023</p>
+                        </article>
+
+                        <article class="article">
+                            <h2 class="article__title">
+                                <a
+                                    href="https://acode.com.ua/constraints-sql/"
+                                    class="article__link"
+                                >
+                                    Обмеження в SQL
+                                </a>
+                            </h2>
+                            <p class="article__description">
+                                У SQL ми можемо застосувати правила до стовпця,
+                                відомі як обмеження. Ці правила стосуються
+                                даних, які можуть зберігатися в стовпці.
+                                Наприклад, якщо стовпець має обмеження NOT NULL,
+                                то він не зможе зберігати значення NULL.
+                            </p>
+                            <p class="article__date">11 Бер 2023</p>
+                        </article>
+                    </section>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer__container">
+                    <p class="footer__text">Copyright © 2023 My Website</p>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

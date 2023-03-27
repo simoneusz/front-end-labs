@@ -1,84 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="../styles/style.css" />
         <script src="http://localhost:9000/webpack-dev-server.js"></script>
         <title>Index</title>
-        <style>
-            body {
-                font-family: "Helvetica Neue", sans-serif serif;
-            }
-            nav {
-                display: flex;
-                justify-content: center;
-            }
-            nav ul {
-                display: flex;
-                gap: 30px;
-            }
-            li {
-                list-style-type: none;
-                font-size: 14px;
-            }
-            .nav__item a {
-                font-size: 20px;
-                color: black;
-                text-decoration: none;
-            }
-            .top p {
-                margin-bottom: 30px;
-            }
-            .face {
-                height: 320px;
-                width: 320px;
-                background-size: 100%;
-            }
-        </style>
     </head>
-    <body>
-        <nav>
-            <ul>
-                <li class="nav__item"><a href="index.html">index</a></li>
-                <li class="nav__item"><a href="news.html">news</a></li>
-                <li class="nav__item"><a href="photo.html">photo</a></li>
-                <li class="nav__item"><a href="rozklad.html">rozklad</a></li>
-            </ul>
-        </nav>
-        <h1>Личная страница</h1>
-        <img class="face" src="../assets/images/face.jpg" alt="Face" />
-        <main>
-            <section>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nulla <q>dolorum</q> quae cum nam, rem itaque mollitia
-                    eveniet velit veniam labore id totam, animi ad sapiente,
-                    suscipit cupidi
-                    <i>tate ab quas tenetur beatae alias vero mol</i> estias.
-                    Quaerat, corporis <b>molestias</b> ullam consectetur ipsam
-                    quo sunt velit provident porro beatae. Ad ut a culpa, veniam
-                    vero aspernatur obcaecati in tenetur sint. Consectetur alias
-                    unde obcaecati debitis, dolore tenetur explicabo corrupti.
-                    Totam veniam sint <sub>ipsam</sub>, minus est in repudiandae
-                    laborum! Harum minima ipsa quos libero iusto soluta sequi
-                    dicta consequuntur, adipisci id saepe minus.
-                </p>
-            </section>
-            <section>
-                <h2>Мои увлечения</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Aliquid deleniti nostrum aut repudiandae.</li>
-                    <li>Libero veritatis ut ipsa quia.</li>
-                    <li>Nisi eveniet nobis dolore necessitatibus.</li>
-                    <li>Quisquam autem debitis fugit enim.</li>
-                    <li>Nobis temporibus sed optio unde!</li>
-                </ul>
-            </section>
-        </main>
-        <footer>
-            <p>Copyright 2014 Ваш сайт</p>
-        </footer>
+
+    <body class="page__body">
+        <div class="wrapper">
+            <nav class="navigation">
+                <div class="navigation__container">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="index.html"
+                                >index</a
+                            >
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="news.html"
+                                >news</a
+                            >
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="photo.html"
+                                >photo</a
+                            >
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="rozklad.html"
+                                >rozklad</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="content__container">
+                    <section class="content__section self-info">
+                        <h1 class="content__heading">Личная страница</h1>
+                        <img
+                            class="content__image"
+                            src="../assets/images/face.jpg"
+                            alt="Face"
+                        />
+                        <p class="content__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nulla
+                            <q class="content__quote">dolorum</q> quae cum nam,
+                            rem itaque mollitia eveniet velit veniam labore id
+                            totam, animi ad sapiente, suscipit cupidi
+                            <i class="content__italic"
+                                >tate ab quas tenetur beatae alias vero mol</i
+                            >
+                            estias. Quaerat, corporis
+                            <b class="content__bold">molestias</b> ullam
+                            consectetur ipsam quo sunt velit provident porro
+                            beatae. Ad ut a culpa, veniam vero aspernatur
+                            obcaecati in tenetur sint. Consectetur alias unde
+                            obcaecati debitis, dolore tenetur explicabo
+                            corrupti. Totam veniam sint
+                            <sub class="content__subscript">ipsam</sub>, minus
+                            est in repudiandae laborum! Harum minima ipsa quos
+                            libero iusto soluta sequi dicta consequuntur,
+                            adipisci id saepe minus.
+                        </p>
+                    </section>
+                    <section class="content__section">
+                        <h2 class="content__subheading">Мои увлечения</h2>
+                        <ul class="content__list">
+                            <li class="content__item">
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li class="content__item">
+                                Aliquid deleniti nostrum aut repudiandae.
+                            </li>
+                            <li class="content__item">
+                                Libero veritatis ut ipsa quia.
+                            </li>
+                            <li class="content__item">
+                                Nisi eveniet nobis dolore necessitatibus.
+                            </li>
+                            <li class="content__item">
+                                Quisquam autem debitis fugit enim.
+                            </li>
+                            <li class="content__item">
+                                Nobis temporibus sed optio unde
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer__container">
+                    <p class="footer__text">Copyright © 2023 My Website</p>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
