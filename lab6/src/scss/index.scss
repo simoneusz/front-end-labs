@@ -1,0 +1,294 @@
+$color-main: #e01625;
+$color-secondary: #963b42;
+$color-tertiary: #78040d;
+$color-accent: #f4616c;
+$color-light: #f49ba2;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    list-style-type: none;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+$color-main: #e01625;
+$color-secondary: #963b42;
+$color-tertiary: #78040d;
+$color-accent: #f4616c;
+$color-light: #f49ba2;
+
+.page__body {
+    background: rgb(150, 59, 66);
+    background: linear-gradient(
+        90deg,
+        rgba(150, 59, 66, 1) 0%,
+        rgba(244, 97, 108, 1) 50%,
+        rgba(120, 4, 13, 1) 100%
+    );
+    color: #fff;
+    font-family: Arial, sans-serif;
+
+    .wrapper {
+        [class*="__container"] {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: $color-main;
+    padding: 10px;
+
+    &__list {
+        display: flex;
+        list-style: none;
+    }
+    &__item:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &__link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+}
+
+.content {
+    height: 100%;
+
+    &__heading {
+        font-size: 36px;
+        margin-top: 40px;
+    }
+
+    &__image {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin-top: 20px;
+    }
+
+    &__text {
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+    &__quote {
+        color: $color-accent;
+    }
+
+    &__italic {
+        color: $color-secondary;
+    }
+
+    &__bold {
+        color: $color-tertiary;
+    }
+
+    &__subscript {
+        font-size: 14px;
+        vertical-align: sub;
+        color: $color-secondary;
+    }
+
+    &__subheading {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+
+    &__list {
+        margin-top: 20px;
+
+        &__item {
+            margin-bottom: 10px;
+            list-style: none;
+        }
+    }
+}
+
+.self-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    background-color: $color-secondary;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+
+    &__text {
+        font-size: 14px;
+        color: #fff;
+    }
+}
+
+.article {
+    padding: 10px;
+    background-color: $color-accent;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 10px;
+
+        a {
+            color: $color-tertiary;
+        }
+    }
+
+    &__description {
+        font-size: 14px;
+    }
+
+    &__date {
+    }
+}
+
+.photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap:30px;
+}
+@media (max-width:1200px){
+    .photos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.teachers__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    .teacher {
+        list-style-type: decimal;
+    }
+}
