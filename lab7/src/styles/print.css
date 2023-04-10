@@ -1,0 +1,33 @@
+@media print{
+    .navigation{
+        display: none!important;
+    }
+    .footer{
+        display: none;
+    }
+    .content__quote {
+        color: #000!important;
+    }
+
+    .content__italic {
+        color: #000!important;
+    }
+
+    .content__bold {
+        color: #000!important;
+    }
+    .content__subscript{
+        color: #000 !important;
+    }
+    .page__body{
+        margin:50px;
+    }
+    .page__body, .wrapper{
+        background-color: #fff;
+        font-family: Georgia, serif;
+    }
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: smaller;
+    }
+}
