@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.expense-date {
+    display: flex;
+    flex-direction: column;
+    width: 5.5rem;
+    height: 5.5rem;
+    border: 1px solid #ececec;
+    background-color: #2a2a2a;
+    color: white;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.expense-date__month {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.expense-date__year {
+    font-size: 0.75rem;
+}
+
+.expense-date__day {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.expense-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: #4b4b4b;
+    border-radius: 12px;
+}
+
+.expense-item__description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.expense-item h2 {
+    color: #3a3a3a;
+    font-size: 1rem;
+    flex: 1 1;
+    margin: 0 1rem;
+    color: white;
+}
+
+.expense-item__price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #40005d;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+
+.expenses {
+    padding: 1rem;
+    background-color: rgba(117, 118, 118, 0.46);
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
