@@ -1,0 +1,48 @@
+.form {
+    background-color: #b406ba;
+    margin: 2rem auto;
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 800px;
+}
+.form__control {
+    margin-bottom: 1rem;
+}
+
+.form__label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form__input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 2px solid #52056e;
+    width: 100%;
+}
+
+.form__button {
+    font: inherit;
+    background-color: #52056e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 2rem;
+    margin-right: 1rem;
+}
+.add-expense {
+    background-color: #b406ba;
+    margin: 2rem auto;
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 800px;
+}
+.button {
+    background-color: #40005d;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 20px 30px;
+}
