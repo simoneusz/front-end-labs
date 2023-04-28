@@ -3,7 +3,7 @@ import '../../Expenses.css';
 
 function Expenses(props) {
     return (
-        <div className="expenses">
+        <div className="Expenses">
             {props.items.map((expense) => (
                 <ExpenseItem key={expense.id} {...expense} />
             ))}

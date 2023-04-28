@@ -1,11 +1,25 @@
 import { useState } from 'react';
 import '../../../src/ExpenseForm.css';
+import ExpensesList from './ExpensesList';
+import { collection, addDoc } from "firebase/firestore";
+import db from '../firebase/firebase'
+
 function ExpenseForm(props) {
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
     const [isEditing, setIsEditing] = useState(false);
 
+    function addExpenseHandler(expenseData) {
+        try {
+            const expensesCollection = collection(db, "expenses");
+            const docRef = addDoc(expensesCollection, expenseData);
+            console.log("Document written with ID: ", docRef.id);
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
+
+    }
     function titleChangeHandler(event) {
         setEnteredTitle(event.target.value);
     }
@@ -20,14 +34,13 @@ function ExpenseForm(props) {
 
     function submitHandler(event) {
         event.preventDefault();
-
         const expenseData = {
             title: enteredTitle,
             amount: enteredAmount,
-            date: new Date(enteredDate),
+            date: new Date(enteredDate).toISOString(),
         };
 
-        props.onSaveExpenseData(expenseData);
+        addExpenseHandler(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
