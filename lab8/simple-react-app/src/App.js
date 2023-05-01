@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import Expenses from './components/card/Expenses';
 import ExpenseForm from './components/Forms/ExpenseForm';
 import ExpensesChart from './components/Filters/ExpensesChart';
+import Spinner from './components/Spinner';
+
 import { collection, addDoc, getDocs } from 'firebase/firestore';
 import db from './components/firebase/firebase';
 
@@ -55,36 +57,47 @@ function App() {
     amount: 422.33,
     date: new Date(2023, 1, 12),
   },
-];
-  const [expenses, setExpenses] = useState(defaultExpenses);
+  ];
 
+  const [expenses, setExpenses] = useState([]);
+  const canLoad = true;
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
-    const fetchData = async () => {
-      const expensesSnapshot = await getDocs(collection(db, "expenses"));
-      const expensesData = expensesSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-        date: new Date(doc.data().date)
-      }));
-      setExpenses(expensesData);
-    };
-    fetchData();
-  }, [db, expenses]);
+    if (canLoad) {
+      setLoading(true);
+      const fetchData = async () => {
+        const expensesSnapshot = await getDocs(collection(db, "expenses"));
+        const expensesData = expensesSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+          date: new Date(doc.data().date)
+        }));
+        setExpenses(expensesData);
+        setLoading(false);
+      };
+      fetchData();
+    }
+  }, [db, setExpenses]);
 
-  // Добавление новых данных в Firebase и в state
   function addExpenseHandler(expense) {
-    const docRef = addDoc(collection(db, 'expenses'), expense);
-    const newExpense = { id: docRef.id, ...expense };
-    setExpenses((prevExpenses) => {
-      return [...prevExpenses, newExpense];
-    });
-  } 
+    setLoading(true);
+    if (canLoad) {
+      const docRef = addDoc(collection(db, 'expenses'), expense);
+      const newExpense = { id: docRef.id, ...expense };
+      setExpenses((prevExpenses) => {
+        return [...prevExpenses, newExpense];
+      });
+
+    }
+    else console.log("cannot load data")
+    setLoading(false);
+  }
 
   return (
     <div className="App">
       <ExpenseForm onSaveExpenseData={addExpenseHandler} />
       <ExpensesChart expenses={expenses} />
-      <Expenses items={expenses} />
+      {loading ? <Spinner /> : expenses.length > 0 ? <Expenses items={expenses} /> : <h1>No data avalible</h1>}
     </div>
   );
 }

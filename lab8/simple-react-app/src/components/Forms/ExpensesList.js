@@ -14,7 +14,7 @@ function ExpenseList() {
         fetchData();
     }, []);
 
-    return null; // Пустой компонент, который ничего не рендерит
+    return null;
 }
 
 export default ExpenseList;

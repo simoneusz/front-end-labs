@@ -10,13 +10,15 @@ function ExpenseForm(props) {
     const [enteredDate, setEnteredDate] = useState('');
     const [isEditing, setIsEditing] = useState(false);
 
+    //const [item, setItem] = useState({title:'', amount:0, date: new Date()})
+
     function addExpenseHandler(expenseData) {
         try {
             const expensesCollection = collection(db, "expenses");
             const docRef = addDoc(expensesCollection, expenseData);
             console.log("Document written with ID: ", docRef.id);
           } catch (e) {
-            console.error("Error adding document: ", e);
+            console.error("Error: ", e);
           }
 
     }
